@@ -1,27 +1,5 @@
-import type { Metadata, Site, Socials } from "@types";
+// Place any global data in this file.
+// You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE: Site = {
-  TITLE: "reasonable.diet",
-  DESCRIPTION: "Astro Micro is an accessible and lightweight blog.",
-  NUM_POSTS_ON_HOMEPAGE: 5,
-};
-
-export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
-};
-
-export const SOCIALS: Socials = [
-  {
-    NAME: "X (formerly Twitter)",
-    HREF: "https://twitter.com/boogerbuttcheeks",
-  },
-  {
-    NAME: "GitHub",
-    HREF: "https://github.com/trevortylerlee",
-  },
-  {
-    NAME: "LinkedIn",
-    HREF: "https://www.linkedin.com/in/trevortylerlee",
-  },
-];
+export const SITE_TITLE = 'Astro Blog';
+export const SITE_DESCRIPTION = 'Welcome to my website!';
