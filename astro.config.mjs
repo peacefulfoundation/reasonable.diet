@@ -7,7 +7,10 @@ import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-micro.vercel.app",
+  site: "https://peacefulfoundation.gitlab.io",
+  base: "/reasonable.diet",
+  outDir: "public",
+  publicDir: "static",
   integrations: [tailwind(), sitemap(), mdx(), pagefind()],
   markdown: {
     shikiConfig: {
