@@ -1,4 +1,4 @@
-import type { Links, Site } from '@/types';
+import type { Links, Site, Socials } from '@/types';
 
 export const SITE: Site = {
   TITLE: 'reasonable.diet',
@@ -17,3 +17,13 @@ export const LINKS: Links = [
     HREF: '/categories',
   },
 ];
+
+// Socials
+export const SOCIALS: Socials = [
+  {
+    NAME: 'GitHub',
+    ICON: 'github',
+    TEXT: 'peacefulfoundation',
+    HREF: 'https://github.com/peacefulfoundation/reasonable.diet'
+  }
+]

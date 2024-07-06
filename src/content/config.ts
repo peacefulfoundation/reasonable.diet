@@ -8,7 +8,7 @@ const recipes = defineCollection({
     author: reference('authors'),
     cuisine: z.array(z.string()),
     tags: z.array(z.string()),
-    relatedRecipes: z.array(reference('recipes'))
+    relatedRecipes: z.array(reference('recipes')),
   }),
 });
 
@@ -17,7 +17,7 @@ const authors = defineCollection({
   schema: z.object({
     name: z.string(),
     website: z.string().url(),
-  })
+  }),
 });
 
 export const collections = { recipes, authors };
