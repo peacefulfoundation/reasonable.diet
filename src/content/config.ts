@@ -1,14 +1,23 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 const recipes = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
+    author: reference('authors'),
+    cuisine: z.array(z.string()),
+    tags: z.array(z.string()),
+    relatedRecipes: z.array(reference('recipes'))
   }),
 });
 
-export const collections = { recipes };
+const authors = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    website: z.string().url(),
+  })
+});
+
+export const collections = { recipes, authors };

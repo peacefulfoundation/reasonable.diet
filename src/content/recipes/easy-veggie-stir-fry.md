@@ -1,7 +1,9 @@
 ---
 title: Easy Veggie Stir-Fry
 description: Quick and flavorful veggie stir-fry with a savory sauce, served over rice for a satisfying meal.
-pubDate: 'Jul 05 2024'
+author: abhigyan-trips
+cuisine: ['🇲🇽 Mexican']
+tags: ['Quick', 'Something']
 ---
 
 **Prep Time:** 10 minutes  

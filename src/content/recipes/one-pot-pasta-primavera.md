@@ -1,7 +1,9 @@
 ---
 title: One-Pot Pasta Primavera
 description: A simple, colorful pasta dish with fresh vegetables, perfect for a quick and nutritious meal.
-pubDate: 'Jul 05 2024'
+author: abhigyan-trips
+cuisine: ['🇮🇹 Italian']
+tags: ['Pasta', 'Cheese']
 ---
 
 **Prep Time:** 10 minutes  

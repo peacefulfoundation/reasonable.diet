@@ -1,7 +1,9 @@
 ---
 title: Spaghetti Aglio e Olio
 description: This is a description
-pubDate: 'Jul 05 2024'
+author: abhigyan-trips
+cuisine: ['🇮🇹 Italian']
+tags: ['Pasta']
 ---
 
 **Prep Time:** 10 minutes  

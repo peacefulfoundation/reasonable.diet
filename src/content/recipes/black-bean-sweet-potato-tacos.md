@@ -1,7 +1,9 @@
 ---
 title: Black Bean and Sweet Potato Tacos
 description: Flavorful vegetarian tacos with roasted sweet potatoes, black beans, and a zesty avocado crema.
-pubDate: 'Jul 05 2024'
+author: abhigyan-trips
+cuisine: ['🇲🇽 Mexican']
+tags: ['Quick', 'Something']
 ---
 
 **Prep Time:** 15 minutes  
