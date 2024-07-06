@@ -6,7 +6,7 @@ pubDate: 'Jul 05 2024'
 
 **Prep Time:** 15 minutes  
 **Cook Time:** 25 minutes  
-**Servings:** 4  
+**Servings:** 4
 
 ### Ingredients
 

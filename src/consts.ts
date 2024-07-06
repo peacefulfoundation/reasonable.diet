@@ -1,5 +1,19 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+import type { Links, Site } from '@/types';
 
-export const SITE_TITLE = 'Astro Blog';
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE: Site = {
+  TITLE: 'reasonable.diet',
+  DESCRIPTION: 'Budget-friendly recipes for university students.',
+  AUTHOR: 'peacefulfoundation.org',
+};
+
+// Links
+export const LINKS: Links = [
+  {
+    TEXT: 'Recipes',
+    HREF: '/recipes',
+  },
+  {
+    TEXT: 'Categories',
+    HREF: '/categories',
+  },
+];
