@@ -56,7 +56,7 @@ import Container from '@/components/Container.astro';
               href="/"
               class="flex w-fit gap-1 font-semibold text-current transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
             >
-              <svg class="size-6 fill-current">
+              <svg class="mr-2 size-6 fill-current">
                 <use href="/brand.svg#brand"></use>
               </svg>
               {SITE.TITLE}
@@ -82,25 +82,7 @@ import Container from '@/components/Container.astro';
     >
       <Container size="md">
         <div class="grid h-full grid-cols-1 gap-3 sm:grid-cols-2">
-          <div
-            class="order-2 flex flex-col items-center justify-center sm:order-1 sm:items-start"
-          >
-            <div class="legal">
-              <a
-                href="/legal/terms"
-                class="text-current transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
-              >
-                Terms
-              </a> |
-              <a
-                href="/legal/privacy"
-                class="text-current transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
-              >
-                Privacy
-              </a>
-            </div>
-            <div class="mt-2 text-sm">&copy; 2024 | All rights reserved</div>
-          </div>
+          <div class="text-sm">&copy; 2024 | All rights reserved</div>
 
           <div class="order-1 flex justify-center sm:order-2 sm:justify-end">
             <div class="flex flex-wrap items-center justify-center gap-1"></div>

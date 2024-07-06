@@ -4,69 +4,7 @@ import { SITE } from '@/consts';
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
-  <!-- HERO -->
-  <section class="relative h-screen w-full">
-    <div
-      id="planetcont"
-      class="animate absolute inset-0 top-1/4 overflow-hidden"
-    >
-      <div
-        id="crescent"
-        class="absolute left-1/2 top-0 aspect-square min-h-[100vh] w-[250vw] -translate-x-1/2 rounded-full bg-gradient-to-b from-black/25 from-0% to-transparent to-5% p-[1px] dark:from-white/75"
-      >
-        <div
-          id="planet"
-          class="flex h-full w-full justify-center overflow-hidden rounded-full bg-white p-[1px] dark:bg-black"
-        >
-          <div
-            id="blur"
-            class="h-20 w-full rounded-full bg-neutral-900/25 blur-3xl dark:bg-white/25"
-          >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="animate absolute flex h-full w-full items-center justify-center"
-    >
-      <div class="relative flex h-full w-full items-center justify-center">
-        <div class="p-5 text-center">
-          <p
-            class="animated text-lg font-semibold opacity-75 md:text-xl lg:text-2xl"
-          >
-            Hello, I am Mark
-          </p>
-          <p
-            class="animated text-2xl font-bold uppercase text-black dark:text-white md:text-3xl lg:text-4xl"
-          >
-            Software Engineer
-          </p>
-          <p class="animated text-sm opacity-75 md:text-base lg:text-lg">
-            Currently designing products for humans.
-          </p>
-          <div
-            id="ctaButtons"
-            class="animated mt-5 flex flex-wrap justify-center gap-4"
-          >
-            <a
-              href="/blog"
-              class="blend truncate rounded bg-black px-4 py-2 text-xs text-white hover:opacity-75 dark:bg-white dark:text-black md:text-sm lg:text-base"
-            >
-              Read my blog
-            </a>
-            <a
-              href="/work"
-              class="blend truncate rounded border border-black/25 px-4 py-2 text-xs hover:bg-black/5 dark:border-white/25 hover:dark:bg-white/15 md:text-sm lg:text-base"
-            >
-              View my work
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="relative bg-white dark:bg-black">
+  <div class="relative bg-white pt-16 dark:bg-black">
     <div class="mx-auto max-w-screen-sm space-y-24 p-5 pb-16">
       <!-- About Section -->
       <section class="animate">
@@ -79,27 +17,10 @@ import { SITE } from '@/consts';
               ><i>crypto enthusiast</i></b
             > and <b><i>sarcasm connoisseur</i></b>.
           </p>
-          <p>
-            I love to both build and break things. I am motivated by challenging
-            projects with self-guided research and dynamic problem solving. My
-            true passion is crafting creative front end designs with unique
-            takes on color, typography and motion.
-          </p>
-          <p>During my career</p>
-          <p>
-            I have built products ranging from marketing and ecommerce websites
-            to complex enterprise apps with focus on delivering fast, elegant
-            code along with delightful user interfaces.
-          </p>
-          <p>Now</p>
-          <p>
-            I currently work as a software engineer at StreamlineFS, where I do
-            product planning, design and development.
-          </p>
         </article>
       </section>
 
-      <!-- Blog Preview Section -->
+      <!-- Recipes Preview Section -->
       <section class="animate">
         <div class="space-y-4">
           <div class="flex justify-between">
@@ -119,28 +40,6 @@ import { SITE } from '@/consts';
         </div>
       </section>
 
-      <!-- Project Preview Section -->
-      <section class="animate">
-        <div class="space-y-4">
-          <div class="flex justify-between">
-            <p class="font-semibold text-black dark:text-white">
-              Recent projects
-            </p>
-            <a
-              href="/projects"
-              class="blend group col-span-3 flex w-fit items-center gap-1 text-black underline decoration-black/25 decoration-[.5px] underline-offset-2 hover:decoration-black dark:text-white dark:decoration-white/50 dark:hover:decoration-white"
-            >
-              <span
-                class="blend text-black/75 group-hover:text-black dark:text-white/75 group-hover:dark:text-white"
-              >
-                All projects
-              </span>
-            </a>
-          </div>
-          <ul class="space-y-4"></ul>
-        </div>
-      </section>
-
       <!-- Contact Section -->
       <section class="animate">
         <div>
@@ -150,5 +49,5 @@ import { SITE } from '@/consts';
         </div>
       </section>
     </div>
-  </div></PageLayout
->
+  </div>
+</PageLayout>
