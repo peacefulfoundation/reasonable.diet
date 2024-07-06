@@ -6,7 +6,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://peacefulfoundation.github.io',
-  base: '/reasonable.diet',
+  site: 'https://diet.abhigyantrips.dev',
   integrations: [mdx(), sitemap(), tailwind()]
 });
