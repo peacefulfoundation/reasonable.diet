@@ -8,7 +8,7 @@ const recipes = defineCollection({
     author: reference('authors'),
     cuisine: z.array(z.string()),
     tags: z.array(z.string()),
-    relatedRecipes: z.array(reference('recipes')),
+    relatedRecipes: z.array(reference('recipes')).optional(),
   }),
 });
 

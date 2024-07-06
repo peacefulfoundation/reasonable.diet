@@ -16,6 +16,7 @@ export async function GET(context: Context) {
     items: recipes.map((item) => ({
       title: item.data.title,
       description: item.data.description,
+      pubDate: new Date('Jul 05 2024'),
       link: `/recipes/${item.slug}/`,
     })),
   });
