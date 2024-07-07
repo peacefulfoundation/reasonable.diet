@@ -1,0 +1,12 @@
+---
+import type { GetStaticPathsOptions } from 'astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const recipes = await getCollection('recipes');
+
+  return paginate(recipes, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+---
