@@ -1,9 +1,10 @@
 ---
 import { SITE, LINKS } from '@/consts';
 import { cn } from '@/lib/utils';
+import Container from '@/components/Container.astro';
+
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
-import Container from '@/components/Container.astro';
 ---
 
 <header id="header" class="fixed top-0 z-50 h-16 w-full">

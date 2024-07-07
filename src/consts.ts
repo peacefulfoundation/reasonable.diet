@@ -10,8 +10,8 @@ export const SITE: Site = {
 // Search
 export const SEARCH: Page = {
   TITLE: 'Search',
-  DESCRIPTION: 'Search for your favorite budget-friendly recipes!'
-}
+  DESCRIPTION: 'Search for your favorite budget-friendly recipes!',
+};
 
 // Links
 export const LINKS: Links = [
@@ -31,12 +31,12 @@ export const SOCIALS: Socials = [
     NAME: 'GitHub',
     ICON: 'github',
     TEXT: 'peacefulfoundation',
-    HREF: 'https://github.com/peacefulfoundation/reasonable.diet'
+    HREF: 'https://github.com/peacefulfoundation/reasonable.diet',
   },
   {
     NAME: 'Discord',
     ICON: 'discord',
     TEXT: 'quiteasily.org',
     HREF: 'https://discord.gg/uvYhwtznTK',
-  }
-]
+  },
+];
