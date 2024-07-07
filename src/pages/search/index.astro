@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import TopLayout from '@/layouts/TopLayout.astro';
+import BottomLayout from '@/layouts/BottomLayout.astro';
+import { SEARCH } from '@/consts';
+
+const data = await getCollection('recipes');
+---
+
+<PageLayout title={SEARCH.TITLE} description={SEARCH.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">{SEARCH.TITLE}</div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate"></div>
+  </BottomLayout>
+</PageLayout>
