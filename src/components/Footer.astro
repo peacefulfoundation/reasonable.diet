@@ -1,5 +1,5 @@
 ---
-import { SITE } from '@/consts';
+import { SITE, SOCIALS } from '@/consts';
 import Container from '@/components/Container.astro';
 ---
 
@@ -50,42 +50,32 @@ import Container from '@/components/Container.astro';
       class="overflow-hidden whitespace-nowrap border-t border-black/10 py-5 dark:border-white/25"
     >
       <Container size="md">
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div class="flex flex-col items-center sm:items-start">
-            <a
-              href="/"
-              class="flex w-fit gap-1 font-semibold text-current transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
-            >
-              <svg class="mr-2 size-6 fill-current">
-                <use href="/brand.svg#brand"></use>
-              </svg>
-              {SITE.TITLE}
-            </a>
+        <div class="grid h-full grid-cols-1 items-center gap-3 sm:grid-cols-2">
+          <div class="text-sm">
+            a <a
+              href="https://peacefulfoundation.org"
+              class="font-bold no-underline underline-offset-2 hover:underline"
+              >peacefulfoundation.org</a
+            > project
           </div>
-          <div class="flex items-center justify-center gap-2 sm:justify-end">
-            <span class="relative flex h-3 w-3">
-              <span
-                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300"
-              ></span>
-              <span
-                class="relative inline-flex h-3 w-3 rounded-full bg-green-500"
-              ></span>
-            </span>
-            All systems normal
-          </div>
-        </div>
-      </Container>
-    </section>
-
-    <section
-      class="overflow-hidden whitespace-nowrap border-t border-black/10 py-5 dark:border-white/25"
-    >
-      <Container size="md">
-        <div class="grid h-full grid-cols-1 gap-3 sm:grid-cols-2">
-          <div class="text-sm">&copy; 2024 | All rights reserved</div>
 
           <div class="order-1 flex justify-center sm:order-2 sm:justify-end">
-            <div class="flex flex-wrap items-center justify-center gap-1"></div>
+            <div class="flex flex-wrap items-center justify-center gap-1">
+              {
+                SOCIALS.map((SOCIAL) => (
+                  <a
+                    href={SOCIAL.HREF}
+                    target="_blank"
+                    aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                    class="blend group size-10 items-center justify-center rounded-full p-2 hover:bg-black/5 dark:hover:bg-white/20"
+                  >
+                    <svg class="blend size-full fill-current group-hover:fill-black group-hover:dark:fill-white">
+                      <use href={`/socials.svg#${SOCIAL.ICON}`} />
+                    </svg>
+                  </a>
+                ))
+              }
+            </div>
           </div>
         </div>
       </Container>
