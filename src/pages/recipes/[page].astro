@@ -1,6 +1,6 @@
 ---
-import type { GetStaticPathsOptions } from 'astro';
-import { getCollection } from 'astro:content';
+import type { GetStaticPathsOptions, Page } from 'astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
 import TopLayout from '@/layouts/TopLayout.astro';
 import BottomLayout from '@/layouts/BottomLayout.astro';
@@ -14,7 +14,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   return paginate(recipes, { pageSize: 5 });
 }
 
-const { page } = Astro.props;
+const { page } = Astro.props as {
+  page: Page<CollectionEntry<'recipes'>>;
+};
 ---
 
 <PageLayout title={RECIPES.TITLE} description={RECIPES.DESCRIPTION}>

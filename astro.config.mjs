@@ -7,8 +7,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://reasonable-diet.abhigyantrips.dev',
-  integrations: [mdx(), sitemap(), tailwind({ applyBaseStyles: false })],
-  redirects: {
-    '/recipes': '/recipes/1',
-  },
+  integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap()],
 });
