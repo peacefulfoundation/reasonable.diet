@@ -11,4 +11,5 @@ export default defineConfig({
   redirects: {
     '/recipes': '/recipes/1',
   },
+  trailingSlash: 'never',
 });
