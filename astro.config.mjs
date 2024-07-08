@@ -8,4 +8,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://reasonable-diet.abhigyantrips.dev',
   integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap()],
+  output: 'static',
 });
