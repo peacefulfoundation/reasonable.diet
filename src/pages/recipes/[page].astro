@@ -1,12 +1,43 @@
 ---
 import type { GetStaticPathsOptions } from 'astro';
 import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import TopLayout from '@/layouts/TopLayout.astro';
+import BottomLayout from '@/layouts/BottomLayout.astro';
+import ArrowCard from '@/components/ArrowCard.astro';
+import { RECIPES } from '@/consts';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const recipes = await getCollection('recipes');
 
-  return paginate(recipes, { pageSize: 10 });
+  return paginate(recipes, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
 ---
+
+<PageLayout title={RECIPES.TITLE} description={RECIPES.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {RECIPES.TITLE}
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <div class="flex flex-col">
+        <div class="mb-2 text-sm uppercase">
+          SHOWING {page.data.length} OF {page.total} POSTS
+        </div>
+        <ul class="flex flex-col space-y-3">
+          {
+            page.data.map((entry) => (
+              <li>
+                <ArrowCard entry={entry} />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </BottomLayout>
+</PageLayout>
