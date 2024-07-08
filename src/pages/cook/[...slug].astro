@@ -31,11 +31,11 @@ if (recipe.data.relatedRecipes) {
     </div>
   </TopLayout>
   <BottomLayout>
-    <div class="animate prose"><Content /></div>
+    <article class="animate"><Content /></article>
     {
       relatedPosts && (
         <div class="animate">
-          <h2 class="mb-4 mt-8 text-xl font-bold leading-5">Related Recipes</h2>
+          <h2 class="mb-4 text-xl font-bold leading-5">Related Recipes</h2>
           <ul class="flex flex-col space-y-3">
             {relatedPosts.map((entry) => (
               <li>
