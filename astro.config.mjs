@@ -10,5 +10,6 @@ export default defineConfig({
   integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap()],
   redirects: {
     '/recipes': '/recipes/1',
+    '/cook': '/recipes/1',
   },
 });
