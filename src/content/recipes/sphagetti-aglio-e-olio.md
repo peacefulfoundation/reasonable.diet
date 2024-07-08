@@ -2,6 +2,7 @@
 title: Spaghetti Aglio e Olio
 description: This is a description
 author: abhigyan-trips
+pubDate: 'Jul 05 2024'
 cuisine: ['🇮🇹 Italian']
 tags: ['Pasta']
 ---

@@ -2,6 +2,7 @@
 title: One-Pot Creamy Chicken Alfredo Pasta
 description: Creamy and comforting chicken Alfredo pasta cooked in one pot for easy cleanup and a delicious meal.
 author: abhigyan-trips
+pubDate: 'Jul 05 2024'
 cuisine: ['🇮🇹 Italian']
 tags: ['Pasta', 'Chicken']
 ---

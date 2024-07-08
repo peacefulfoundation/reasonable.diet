@@ -1,12 +1,40 @@
 ---
 import type { GetStaticPathsOptions } from 'astro';
 import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import TopLayout from '@/layouts/TopLayout.astro';
+import BottomLayout from '@/layouts/BottomLayout.astro';
+import ArrowCard from '@/components/ArrowCard.astro';
+import Pagination from '@/components/Pagination.astro';
+import { RECIPES } from '@/consts';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const recipes = await getCollection('recipes');
 
-  return paginate(recipes, { pageSize: 10 });
+  return paginate(recipes, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
 ---
+
+<PageLayout title={RECIPES.TITLE} description={RECIPES.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {RECIPES.TITLE}
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <ul class="flex flex-col space-y-3">
+        {
+          page.data.map((entry) => (
+            <li>
+              <ArrowCard entry={entry} />
+            </li>
+          ))
+        }
+      </ul>
+      <Pagination page={page} />
+    </div>
+  </BottomLayout>
+</PageLayout>

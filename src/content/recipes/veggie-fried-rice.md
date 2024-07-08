@@ -2,6 +2,7 @@
 title: Veggie Fried Rice
 description: A quick and easy fried rice loaded with colorful vegetables, perfect for a budget-friendly meal.
 author: abhigyan-trips
+pubDate: 'Jul 05 2024'
 cuisine: ['🇨🇳 Chinese']
 tags: ['Fried Rice']
 ---

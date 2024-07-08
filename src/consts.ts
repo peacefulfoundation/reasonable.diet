@@ -7,6 +7,12 @@ export const SITE: Site = {
   AUTHOR: 'peacefulfoundation.org',
 };
 
+// Recipes
+export const RECIPES: Page = {
+  TITLE: 'Recipes',
+  DESCRIPTION: 'A list of budget-friendly recipes to choose from.',
+};
+
 // Search
 export const SEARCH: Page = {
   TITLE: 'Search',

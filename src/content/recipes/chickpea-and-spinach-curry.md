@@ -2,6 +2,7 @@
 title: Chickpea and Spinach Curry
 description: A hearty, protein-packed curry with chickpeas and spinach, perfect for a comforting meal.
 author: abhigyan-trips
+pubDate: 'Jul 05 2024'
 cuisine: ['🇮🇳 Indian']
 tags: ['Quick', 'Something']
 ---
