@@ -16,7 +16,6 @@ export async function GET(context: Context) {
     title: SITE.TITLE,
     description: SITE.DESCRIPTION,
     site: context.site,
-    trailingSlash: false,
     items: recipes.map((item) => ({
       title: item.data.title,
       description: item.data.description,
