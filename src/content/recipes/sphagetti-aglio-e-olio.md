@@ -5,6 +5,9 @@ author: abhigyan-trips
 pubDate: 'Jul 05 2024'
 cuisine: ['🇮🇹 Italian']
 tags: ['Pasta']
+relatedRecipes:
+  - one-pot-chicken-alfredo-pasta
+  - one-pot-pasta-primavera
 ---
 
 **Prep Time:** 10 minutes  
