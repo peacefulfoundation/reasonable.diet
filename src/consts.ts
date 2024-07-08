@@ -23,7 +23,7 @@ export const SEARCH: Page = {
 export const LINKS: Links = [
   {
     TEXT: 'Recipes',
-    HREF: '/recipes',
+    HREF: '/recipes/1',
   },
   {
     TEXT: 'Categories',
