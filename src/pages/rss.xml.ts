@@ -7,7 +7,10 @@ type Context = {
 };
 
 export async function GET(context: Context) {
-  const recipes = await getCollection('recipes');
+  const recipes = (await getCollection('recipes')).sort(
+    (a, b) =>
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
 
   return rss({
     title: SITE.TITLE,
@@ -16,7 +19,7 @@ export async function GET(context: Context) {
     items: recipes.map((item) => ({
       title: item.data.title,
       description: item.data.description,
-      pubDate: new Date('Jul 05 2024'),
+      pubDate: item.data.pubDate,
       link: `/recipes/${item.slug}/`,
     })),
   });

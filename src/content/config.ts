@@ -6,6 +6,7 @@ const recipes = defineCollection({
     title: z.string(),
     description: z.string(),
     author: reference('authors'),
+    pubDate: z.coerce.date(),
     cuisine: z.array(z.string()),
     tags: z.array(z.string()),
     relatedRecipes: z.array(reference('recipes')).optional(),
