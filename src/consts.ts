@@ -25,10 +25,6 @@ export const LINKS: Links = [
     TEXT: 'Recipes',
     HREF: '/recipes/1',
   },
-  {
-    TEXT: 'Categories',
-    HREF: '/categories',
-  },
 ];
 
 // Socials
