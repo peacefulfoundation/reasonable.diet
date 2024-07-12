@@ -1,4 +1,4 @@
-import type { Links, Page, Site, Socials } from '@/types';
+import type { Page, Site, Socials } from '@/types';
 
 // Global
 export const SITE: Site = {
@@ -18,14 +18,6 @@ export const SEARCH: Page = {
   TITLE: 'Search',
   DESCRIPTION: 'Search for your favorite budget-friendly recipes!',
 };
-
-// Links
-export const LINKS: Links = [
-  {
-    TEXT: 'Recipes',
-    HREF: '/recipes/1',
-  },
-];
 
 // Socials
 export const SOCIALS: Socials = [
