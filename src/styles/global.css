@@ -3,6 +3,94 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* https://phosphoricons.com */
+    --red: 17, 80%, 54%;
+    --orange: 21, 100%, 66%;
+    --yellow: 39, 91%, 69%;
+    --mustard: 39, 75%, 48%;
+    --rust: 17, 42%, 40%;
+    --earth: 351, 18%, 43%;
+    --sand: 352, 10%, 71%;
+    --blush: 351, 60%, 87%;
+    --pale: 21, 100%, 93%;
+    --vellum: 38, 24%, 91%;
+    --ghost: 40, 27%, 96%;
+    --foam: 73, 18%, 90%;
+    --lichen: 74, 17%, 81%;
+    --moss: 71, 20%, 21%;
+    --slate: 45, 3%, 24%;
+    --stone: 45, 4%, 20%;
+    --dark-grey: 45, 2%, 39%;
+    --acid: 74, 72%, 62%;
+    --olive: 71, 38%, 53%;
+    --green: 138, 69%, 39%;
+    --darkgreen: 73, 23%, 16%;
+    --deepgreen: 73, 37%, 10%;
+    --blue: 212, 83%, 52%;
+    --purple: 260, 100%, 68%;
+    --eggplant: 260, 11%, 22%;
+    --moss-shadow: rgba(60, 64, 43, 0.2);
+    --slate-sheer: rgba(62, 61, 58, 0.5);
+    --ghost-sheer: rgba(247, 245, 241, 0.5);
+    --elephant: 45, 2%, 39%;
+    --pewter: 36, 8%, 77%;
+    --shadow: rgba(0, 0, 0, 0.15);
+    --scrim: rgba(255, 255, 255, 0.05);
+    --sheer: rgba(194, 186, 196, 0.25);
+    --soft: rgba(194, 186, 196, 0.7);
+    --translucent: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@layer base {
+  :root {
+    /* https://ui.shadcn.com/themes */
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24 9.8% 10%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+  }
+}
+
+@layer base {
   @font-face {
     font-family: 'Atkinson';
     src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -18,25 +106,23 @@
     font-style: normal;
     font-display: swap;
   }
-}
-
-html {
-  overflow-y: scroll;
-  color-scheme: light;
-  background-color: white;
-  font-family: 'Atkinson', sans-serif;
-}
-
-html.dark {
-  color-scheme: dark;
-  background-color: black;
+  * {
+    @apply border-border;
+  }
 }
 
 html,
 body {
   @apply h-full w-full antialiased;
-  @apply bg-white dark:bg-black;
-  @apply text-black/75 dark:text-white/75;
+  @apply bg-background text-foreground;
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
+}
+
+html {
+  overflow-y: scroll;
+  font-family: 'Atkinson', sans-serif;
 }
 
 body {
@@ -44,11 +130,11 @@ body {
 }
 
 main {
-  @apply flex flex-1 flex-col bg-white dark:bg-black;
+  @apply flex flex-1 flex-col bg-background;
 }
 
 header {
-  @apply border-b;
+  @apply border-b border-foreground/20;
   @apply transition-all duration-300 ease-in-out;
 }
 
@@ -57,9 +143,8 @@ header:not(.scrolled) {
 }
 
 header.scrolled {
-  @apply bg-white/75 dark:bg-black/50;
-  @apply border-black/10 dark:border-white/25;
-  @apply saturate-200 backdrop-blur-sm;
+  @apply bg-background/40;
+  @apply saturate-100 backdrop-blur-sm;
 }
 
 article {
@@ -67,21 +152,11 @@ article {
 }
 
 .page-heading {
-  @apply font-semibold text-black dark:text-white;
+  @apply font-semibold text-foreground;
 }
 
 .blend {
   @apply transition-all duration-300 ease-in-out;
-}
-
-/** Light theme particles on home page */
-@keyframes animateParticle {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2000px);
-  }
 }
 
 /** styles for public /animation.js */

@@ -10,11 +10,9 @@ const { entry } = Astro.props;
 
 <a
   href={`/cook/${entry.slug}`}
-  class="group flex items-center gap-3 rounded-lg border border-black/15 p-4 transition-colors duration-300 ease-in-out hover:bg-black/5 dark:border-white/20 hover:dark:bg-white/10"
+  class="group flex items-center gap-3 rounded-lg border border-black/15 bg-card bg-scrim p-4 transition-colors duration-300 ease-in-out hover:bg-sheer/10 hover:dark:bg-scrim/10"
 >
-  <div
-    class="blend flex w-full flex-row items-center group-hover:text-black group-hover:dark:text-white"
-  >
+  <div class="blend flex w-full flex-row items-center">
     <div class="flex w-full flex-col items-start gap-1">
       <ul class="mt-2 flex flex-wrap gap-1">
         {
@@ -26,7 +24,7 @@ const { entry } = Astro.props;
         }
       </ul>
 
-      <div class="mt-2 font-semibold text-black dark:text-white">
+      <div class="mt-2 font-semibold">
         {entry.data.title}
       </div>
 
@@ -37,7 +35,7 @@ const { entry } = Astro.props;
       <ul class="mt-2 flex flex-wrap gap-1">
         {
           entry.data.tags.map((tag: string) => (
-            <li class="rounded-full bg-black/5 px-2 py-1 text-xs capitalize text-black/75 dark:bg-white/20 dark:text-white/75">
+            <li class="rounded-full bg-sheer px-2 py-1 text-xs capitalize text-foreground">
               {tag}
             </li>
           ))
