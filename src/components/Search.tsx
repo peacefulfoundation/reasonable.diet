@@ -1,4 +1,4 @@
-import ArrowCard from '@/components/ArrowCard.astro';
+import ArrowCard from '@/components/ArrowCard';
 import type { CollectionEntry } from 'astro:content';
 import Fuse from 'fuse.js';
 import { createEffect, createSignal } from 'solid-js';
@@ -54,7 +54,7 @@ export default function Search({ data }: Props) {
           <use href={`/ui.svg#search`} />
         </svg>
       </div>
-      {query().length >= 2 && results().length >= 1 && (
+      {query().length >= 2 && results().length && (
         <div class="mt-12">
           <div class="mb-2 text-sm uppercase">
             Found {results().length} results for {`'${query()}'`}
