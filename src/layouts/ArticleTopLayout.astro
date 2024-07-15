@@ -6,7 +6,6 @@ const { entry } = Astro.props as {
 };
 const { collection, data } = entry;
 const { title, description, tags } = data;
-const author = await getEntry(data.author);
 ---
 
 <div>
