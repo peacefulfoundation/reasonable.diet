@@ -5,6 +5,7 @@ export const SITE: Site = {
   TITLE: 'reasonable.diet',
   DESCRIPTION: 'Budget-friendly recipes for university students.',
   AUTHOR: 'peacefulfoundation.org',
+  GITHUB: 'https://github.com/peacefulfoundation/reasonable.diet',
 };
 
 // Recipes
