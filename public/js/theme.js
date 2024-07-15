@@ -54,8 +54,8 @@ function preloadTheme() {
 
 window.onload = () => {
   function initializeThemeButton() {
-    const headerThemeButton = document.getElementById('header-theme-button');
-    headerThemeButton?.addEventListener('click', changeTheme);
+    const footerThemeButton = document.getElementById('footer-theme-button');
+    footerThemeButton?.addEventListener('click', changeTheme);
   }
 
   document.addEventListener('astro:after-swap', initializeThemeButton);

@@ -3,7 +3,7 @@ import { SITE, SOCIALS } from '@/consts';
 import Container from '@/components/Container.astro';
 ---
 
-<footer class="bg-background relative">
+<footer class="relative bg-background">
   <div class="animate">
     <section class="py-5">
       <Container size="md">
@@ -75,6 +75,18 @@ import Container from '@/components/Container.astro';
                   </a>
                 ))
               }
+              <button
+                id="footer-theme-button"
+                aria-label={`Toggle light and dark theme`}
+                class="blend group size-10 items-center justify-center rounded-full fill-foreground p-2 hover:bg-black/5 dark:hover:bg-white/20"
+              >
+                <svg class="block size-full dark:hidden">
+                  <use href="/ui.svg#sun"></use>
+                </svg>
+                <svg class="hidden size-full dark:block">
+                  <use href="/ui.svg#moon"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
