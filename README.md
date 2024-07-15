@@ -1,68 +1,44 @@
-# Astro Starter Kit: Blog
+# [reasonable.diet](https://reasonable.diet)
 
-```sh
-npm create astro@latest -- --template blog
-```
+a curated list of budget-friendly recipes for university students (or anyone out there)! an initative taken by [peacefulfoundation.org](https://peacefulfoundation.org).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/recipes/devcontainer.json)
+## ways to contribute
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- adding a recipe.
+- adding an image of the finished dish to a recipe that doesn't have one.
+- fixing errors in recipes or adding minor improvements.
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## rules for submission
 
-Features:
+- files should be modelled after [`TEMPLATE.md`](/TEMPLATE.md) and stored in [`src/content/recipes`](/src/content/recipes/).
+- files should be named after the dish name with words separated by hyphens (`-`). do **not** use spaces or underscores for separation.
+- the recipe should be "reasonable" - meaning that it should (1) be nutritious/healthy, and (2) be easy to prepare with a short-to-moderate cooking time.
+- don't include ubiquitous ingredients like salt and pepper in the list.
+- don't include images that weren't taken by you. moreover, make sure the images look good! and are meaningful to the recipe. any images you want to add should be in the [`src/assets`](/src/assets/) folder, with filenames relevant to the dish.
+- all files should be in LF line-endings (done on Linux by default, but we've included `.editorconfig` and `.prettierrc` files for the same reason).
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+**following these rules is a must for a speedy review of submissions. if not followed, the merge request will be closed for resubmission.**
 
-## 🚀 Project Structure
+as an author of a recipe, you can include a JSON file at [`src/content/authors`](/src/content/authors/) with your name and a website - this can include your portfolio, social media, or a donation link. see [`abhigyan-trips.json`](/src/content/authors/abhigyan-trips.json) as an example.
 
-Inside of your Astro project, you'll see the following folders and files:
+## tags
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+here's a list of tags we stick to for recipes.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+| tag                    | description                                          |
+| ---------------------- | ---------------------------------------------------- |
+| very cheap             | potatoes and various others, with various seasonings |
+| meal prep              | making in bulk for lunch                             |
+| reasonable!            | "turns out it's already reasonable"                  |
+| foods you know already | remixing foods slightly to be reasonable             |
+| experiments            | the next big thing&trade;                            |
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+for cuisines, add the originating regions of the dish for easy filtering (for example, 'Mexican' or 'Indian').
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/recipes/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+## development
 
-Any static assets, like images, can be placed in the `public/` directory.
+this site is built with [Astro](https://astro.build) and uses their Content Collections functionality. for more information, read their [documentation](https://docs.astro.build).
 
-## 🧞 Commands
+## license
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+this website and all its content are in the public domain. by submitting text or images or anything else to this repository, you waive any pretence of ownership to it, although you are welcome and recommended to give yourself credit on the page you've submitted (including personal or donation links).

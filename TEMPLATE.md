@@ -34,3 +34,5 @@ If you have an image of the finished dish, you can include the same here in the 
 4. If necessary,
 5. an image can be included between some directions if needed to explain something particular.
 6. But that should be kept to a minimum to reduce bandwidth and aid in simplicity.
+
+You can now end with a footnote if you feel like it. :)
