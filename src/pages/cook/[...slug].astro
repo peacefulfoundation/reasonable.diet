@@ -7,12 +7,12 @@ import ArticleTopLayout from '@/layouts/ArticleTopLayout.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
 
 export async function getStaticPaths() {
-  const recipes = await getCollection('recipes');
+	const recipes = await getCollection('recipes');
 
-  return recipes.map((recipe) => ({
-    params: { slug: recipe.slug },
-    props: { recipe },
-  }));
+	return recipes.map((recipe) => ({
+		params: { slug: recipe.slug },
+		props: { recipe },
+	}));
 }
 
 const { recipe } = Astro.props as { recipe: CollectionEntry<'recipes'> };
@@ -20,31 +20,69 @@ const { Content } = await recipe.render();
 
 let relatedPosts;
 if (recipe.data.relatedRecipes) {
-  relatedPosts = await getEntries(recipe.data.relatedRecipes);
+	relatedPosts = await getEntries(recipe.data.relatedRecipes);
 }
 ---
 
-<PageLayout title={recipe.data.title} description={recipe.data.description}>
-  <TopLayout>
-    <div class="animate">
-      <ArticleTopLayout entry={recipe} />
-    </div>
-  </TopLayout>
-  <BottomLayout>
-    <article class="animate"><Content /></article>
-    {
-      relatedPosts && (
-        <div class="animate">
-          <h2 class="mb-4 text-xl font-bold leading-5">Related Recipes</h2>
-          <ul class="flex flex-col space-y-3">
-            {relatedPosts.map((entry) => (
-              <li>
-                <ArrowCard entry={entry} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      )
-    }
-  </BottomLayout>
+<PageLayout
+	title={recipe.data.title}
+	description={recipe.data.description}
+>
+	<TopLayout>
+		<div class='animate'>
+			<ArticleTopLayout entry={recipe} />
+		</div>
+	</TopLayout>
+	<BottomLayout>
+		<article class='animate'><Content /></article>
+		{
+			relatedPosts && (
+				<div class='animate'>
+					<h2 class='mb-4 text-xl font-bold leading-5'>Related Recipes</h2>
+					<ul class='flex flex-col space-y-3'>
+						{relatedPosts.map((entry) => (
+							<li>
+								<ArrowCard entry={entry} />
+							</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
+	</BottomLayout>
 </PageLayout>
+
+<script
+	is:inline
+	define:vars={{
+		recipe: {
+			slug: recipe.slug,
+			title: recipe.data.title,
+			description: recipe.data.description,
+			cuisine: recipe.data.cuisine,
+			tags: recipe.data.tags,
+		},
+	}}
+>
+	// Track recipe visit in localStorage
+	const MAX_RECENT = 6;
+
+	try {
+		const stored = localStorage.getItem('recentRecipes');
+		let recentRecipes = stored ? JSON.parse(stored) : [];
+
+		// Remove if already exists (to move it to front)
+		recentRecipes = recentRecipes.filter((r) => r.slug !== recipe.slug);
+
+		// Add current recipe to front
+		recentRecipes.unshift(recipe);
+
+		// Keep only MAX_RECENT items
+		recentRecipes = recentRecipes.slice(0, MAX_RECENT);
+
+		// Save back to localStorage
+		localStorage.setItem('recentRecipes', JSON.stringify(recentRecipes));
+	} catch (e) {
+		console.error('Failed to save recent recipe:', e);
+	}
+</script>

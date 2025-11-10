@@ -1,10 +1,42 @@
 ---
 import PageLayout from '@/layouts/PageLayout.astro';
 import { SITE } from '@/consts';
+import RecentRecipes from '@/components/RecentRecipes.tsx';
+import { Image } from 'astro:assets';
+import heroImage from '@/assets/hero.png';
 ---
 
-<PageLayout title="Home" description={SITE.DESCRIPTION}>
-  <div class="relative bg-background pt-16">
-    <div class="mx-auto max-w-screen-sm space-y-24 p-5 pb-16"></div>
-  </div>
+<PageLayout
+	title='Home'
+	description={SITE.DESCRIPTION}
+>
+	<div class='relative bg-background'>
+		<!-- Hero Section -->
+		<div class='mx-auto max-w-screen-xl px-5 pb-16 pt-24'>
+			<div class='animate relative aspect-[24/5] overflow-hidden rounded-3xl'>
+				<!-- Hero Image -->
+				<Image
+					src={heroImage}
+					alt='Delicious budget-friendly food'
+					class='h-full w-full object-cover'
+				/>
+
+				<!-- Overlay with Tagline -->
+				<div
+					class='absolute inset-0 flex items-center justify-center bg-black/50'
+				>
+					<h1
+						class='mx-4 max-w-2xl text-center text-2xl font-normal leading-relaxed text-white md:max-w-3xl md:text-3xl'
+					>
+						budget friendly recipes that don't compromise on satiety.
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- Recently Visited Recipes Section -->
+		<div class='animate mx-auto max-w-screen-xl px-5 pb-16'>
+			<RecentRecipes client:load />
+		</div>
+	</div>
 </PageLayout>
