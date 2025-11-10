@@ -1,4 +1,4 @@
-# [reasonable.diet](https://reasonable.diet)
+# [reasonable.recipes](https://reasonable.recipes)
 
 a curated list of budget-friendly recipes for university students (or anyone out there)! an initative taken by [peacefulfoundation.org](https://peacefulfoundation.org).
 

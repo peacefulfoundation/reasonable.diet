@@ -2,10 +2,10 @@ import type { Page, Site, Socials } from '@/types';
 
 // Global
 export const SITE: Site = {
-  TITLE: 'reasonable.diet',
+  TITLE: 'reasonable.recipes',
   DESCRIPTION: 'Budget-friendly recipes for university students.',
   AUTHOR: 'peacefulfoundation.org',
-  GITHUB: 'https://github.com/peacefulfoundation/reasonable.diet',
+  GITHUB: 'https://github.com/peacefulfoundation/reasonable.recipes',
 };
 
 // Recipes
@@ -26,7 +26,7 @@ export const SOCIALS: Socials = [
     NAME: 'GitHub',
     ICON: 'github',
     TEXT: 'peacefulfoundation',
-    HREF: 'https://github.com/peacefulfoundation/reasonable.diet',
+    HREF: 'https://github.com/peacefulfoundation/reasonable.recipes',
   },
   {
     NAME: 'Discord',
